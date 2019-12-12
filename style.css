@@ -1,53 +1,152 @@
+html, body {
+  margin:0;
+  padding:0;
+}
+
 body {
   background-image:url('images/prism.png');
   background-repeat:repeat;
-  font-family: josefin-sans, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family:josefin-sans, sans-serif;
+  font-style:normal;
 }
 
-body a {
-  underline:none;
-}
-
-body a:link, a:visited {
-  color:#d6d6d6;
-  opacity:0.8;
-  transition:0.1s;
-}
-
-body a:hover, a:active {
-  color:#ffffff;
-  opacity:1;
-}
-
-#navigation {
+/* bg-wrapper {
+  display:inline;
   width:100%;
-  text-align:center;
-  font-size:30px;
+  height:100%;
+  background-color:rgba(255,255,255,0.3);
+  position:absolute;
+} */
+
+navigation-bar {
+  display:flex;
+  height:8vh;
+  width:100vw;
+  /* background-color:rgba(1,1,1,0.2); */
 }
 
-#navigation li {
+navigation-bar.unclicked {
+  opacity:0;
+}
+
+navigation-bar.clicked {
+  opacity:1.0;
+  animation-name:navbar-fade;
+  animation-duration:1.5s;
+}
+
+@keyframes navbar-fade {
+  from {
+    opacity:0;
+  }
+}
+
+navigation-bar li {
   display:inline-block;
-  padding-left:40px;
-  padding-right:40px;
+  padding-right:20px;
 }
 
-#content {
-  width:100%;
+main-body {
+  display:flex;
+  height:92vh;
+  width:100vw;
+  color:white;
+}
+
+header-bar {
   text-align:center;
+  width:100vw;
+  display:inline;
+  padding-top:10px;
 }
 
-#container {
-  width:60%;
-  margin:0 auto;
+header-bar.unclicked {
+  margin-top:15vh;
+  height:50vh;
 }
 
-.musicItem {
-  margin-top:20px;
-  margin-bottom:20px;
+header-bar.clicked {
+  margin-top:0vh;
+  height:15vh;
+  animation-name:header-bar-shrink-move;
+  animation-duration:1s;
 }
 
-.musicItem h1 {
-
+@keyframes header-bar-shrink-move {
+  from {
+    margin-top:15vh;
+    height:50vh;
+  }
+  to {
+    margin-top:0vh;
+    height:15vh;
+  }
 }
+
+header-bar img {
+  height:100%;
+  width:100%;
+  margin:0;
+  padding:0;
+}
+
+main-content {
+  position:absolute;
+  top:200px;
+  width:80%;
+  margin-left:10%;
+  margin-right:10%;
+  font-weight:50;
+  padding-bottom:100px;
+}
+
+main-content.unclicked {
+  display:none;
+  opacity:0.0;
+}
+
+main-content.clicked {
+  display:inline;
+  opacity:1.0;
+  animation-name:content-fade;
+  animation-duration:3s;
+}
+
+@keyframes content-fade {
+  from {
+    opacity:0.0;
+  }
+  to {
+    opacity:1.0;
+  }
+}
+
+/* Begin pasted code */
+
+.tablink {
+  color: rgba(219,219,219,0.7);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 17px;
+  width: 100%;
+  font-family:josefin-sans, sans-serif;
+  background-color:rgba(219,219,219,0);
+}
+
+.tablink:hover {
+  color:rgb(189,189,189,1.0);
+  font-weight:1000;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  display: none;
+  height:100%;
+  width:100%;
+}
+
+/* #Home {background-color: red;}
+#News {background-color: red;}
+#Contact {background-color: red;}
+#About {background-color: red;} */

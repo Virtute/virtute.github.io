@@ -3,22 +3,115 @@
   <head>
     <meta charset="utf-8">
     <title>Duncan Boatright</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link type="text/css" rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/dhw2dut.css">
   </head>
   <body>
-    <div id="navigation">
+    <bg-wrapper>
+    <navigation-bar class="unclicked">
       <ul>
-        <a href="music.html"><li>&lt;music &#47;&gt;</li></a>
-        <a href="bio.html"><li>&lt;bio &#47;&gt;</li></a>
-        <a href="cv.html"><li>&lt;cv &#47;&gt;</li></a>
-        <a href="code.html"><li>&lt;code &#47;&gt;</li></a>
+        <li><button class="tablink" onclick="openPage('Bio', this, 'green')" id="defaultOpen">&lt;bio &#47;&gt;</button></li>
+        <li><button class="tablink" onclick="openPage('Music', this, 'green')">&lt;music &#47;&gt;</button></li>
+        <li><button class="tablink" onclick="openPage('CV', this, 'green')">&lt;cv &#47;&gt;</button></li>
+        <li><button class="tablink" onclick="openPage('Code', this, 'green')">&lt;code &#47;&gt;</button></li>
       </ul>
-    </div>
-    <div id="content">
-      <a href="http://www.duncanboatright.com">
-      <img src="images/logo.png" align="center">
-      </a>
-    </div>
+    </navigation-bar>
+    <main-body>
+      <header-bar class="unclicked">
+        <img src="images/logo.svg">
+      </header-bar>
+      <main-content class="unclicked">
+        <div id="Bio" class="tabcontent">
+          <img src="images/profile.jpg" style="height:20vw;width:20vw;float:left;padding:5px 50px 30px 20px;">
+          <p>
+            Hi. My name is <strong>Duncan Boatright</strong> and I make noise.
+          </p>
+          <p>
+            I am a composer, educator, and instructional technologist living in Maryland, currently finishing my Doctorate of Musical Arts from the University of Maryland-College Park. In the past I've written for everything from string quartet to percussion ensemble to solo Game Boy, and I've collaborated with ensembles and artistic groups including StageFree, the Kronos Quartet, the Vaahi Art Collective, and yMusic. My recent works focus on procedurally generated and interactive electronic media utilizing SuperCollider and a number of other tools.
+          </p>
+          <p>
+            I am a passionate pedagogue and I have served as a music educator at both the public school and university levels. I am currently an adjunct music faculty member at the University of Maryland-Baltimore County, and I've previously lectured at the University of Maryland-College Park.
+          </p>
+        </div>
+
+        <div id="Music" class="tabcontent">
+          <div class="musicItem">
+            <!--stories heard-->
+            <h1>stories heard, but not recalled</h1>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/604201740&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+            <p>
+              Fixed media, 2019. Written primarily using SuperCollider with assist from Pro Tools.
+            </p>
+          </div>
+          <div class="musicItem">
+            <!--niamh-->
+            <h1>were you niamh</h1>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/306006535&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+            <p>
+              Timpani and fixed media, 2014. Written primarily using Logic Pro X for Dr. Diana Loomer, professor of percussion at Appalachian State University and West Carolina University as part of the Melodic Timpani Project, which you can read more about <a href="https://dianaloomer.com/melodictimpaniproject">here</a>.
+            </p>
+          </div>
+          <div class="musicItem">
+            <!--yMusic-->
+            <h1>Availability Heuristic</h1>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/612398925%3Fsecret_token%3Ds-Gj6vX&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+            <p>
+              Sextet for flute, clarinet, trumpet, horn, viola, violoncello. Written for yMusic as part of their residency at the University of Maryland in 2018-2019, and performed by yMusic at the University of Maryland.
+            </p>
+          </div>
+          <div class="musicItem">
+            <!--retrospective-->
+            <h1>Retrospective: VI</h1>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/610526085&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+            <p>
+              Septet for flute/piccolo, clarinet (Bb, Eb, and bass), trumpet, trombone, violin, piano.
+            </p>
+          </div>
+          <div class="musicItem">
+            <!--I walk the labyrinth-->
+            <h1>I Walk the Labyrinth</h1>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/413698251&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+            <p>
+              For solo vibraphone, in four movements.
+            </p>
+          </div>
+          <div class="musicItem">
+            <!--connexus-->
+            <h1>Connexus</h1>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/295624638&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+            <p>
+              Marimba duet, in four movements.
+            </p>
+          </div>
+          <div class="musicItem">
+            <!--as I ponder'd-->
+            <h1>As I Ponder'd</h1>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/295624282&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+            <p>
+              For vibraphone and alto.
+            </p>
+          </div>
+        </div>
+
+        <div id="CV" class="tabcontent">
+          <p class="" style="white-space:pre-wrap;">&nbsp;<strong>EDUCATION</strong></p><p class="" style="white-space:pre-wrap;"><strong>Doctor of Musical Arts in Composition</strong>, 2017 – 2020.<br> University of Maryland, College Park</p><p class="" style="white-space:pre-wrap;"><strong>Master of Music in Composition</strong>, 2012-2015<br> University of Maryland, College Park</p><p class="" style="white-space:pre-wrap;"><strong>Bachelor of Music in Theory &amp; Composition</strong>, 2008-2012<br> Appalachian State University<br> <br> </p><p class="" style="white-space:pre-wrap;"><strong>COLLEGE TEACHING </strong></p><p class="" style="white-space:pre-wrap;"><strong>MUSC427: Electronic Music</strong></p><p class="" style="white-space:pre-wrap;">University   of Maryland, Baltimore County</p><p class="" style="white-space:pre-wrap;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Fall   2018 (1 section)</p><p class="" style="white-space:pre-wrap;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Fall   2019 (1 sections)</p><p class="" style="white-space:pre-wrap;">Course for undergraduate composition majors covering the composition, theory, and history of   electronic and electroacoustic music throughout the 20th century and beyond. In addition to providing an overview of landmark works and the development of various compositional techniques, the course provided instruction in Reason, ProTools, Audacity, Max/MSP, and SuperCollider.</p><p class="" style="white-space:pre-wrap;"><strong>MUSC140: Music Fundamentals I</strong></p><p class="" style="white-space:pre-wrap;">University   of Maryland, College Park</p><p class="" style="white-space:pre-wrap;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Fall   2018 (2 sections)</p><p class="" style="white-space:pre-wrap;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Spring   2019 (2 sections)</p><p class="" style="white-space:pre-wrap;">Course for undergraduate non-music majors, covering basic music theory and providing an overview of masterworks from the 17th-20th centuries. Students followed Straus’ <em>Elements of Music </em>and progressed from having no background in music theory to being able to undertake   basic 4-part voice leading composition exercises. Course included three original composition projects.</p><p class="" style="white-space:pre-wrap;">&nbsp;</p><p class="" style="white-space:pre-wrap;"><strong>OTHER TEACHING</strong></p><p class="" style="white-space:pre-wrap;"><strong>2015-2017</strong>: Music Teacher,   Chatham County Public Schools&nbsp;</p><p class="" style="white-space:pre-wrap;"><strong>2013: </strong>Graduate Teaching Assistant, University of Maryland, College Park</p><p class="" style="white-space:pre-wrap;">MUSC665: The Power of Musical   Performance in Social Engagement, Spring 2013</p><p class="" style="white-space:pre-wrap;"><strong>2010-2012: </strong>Undergraduate Teaching Assistant, Appalachian State University</p><p class="" style="white-space:pre-wrap;">MUS 2001 Music Theory III, Fall   2010</p><p class="" style="white-space:pre-wrap;">MUS 2007 Aural Skills III, Fall   2010 </p><p class="" style="white-space:pre-wrap;">MUS 3661 Electronic Music, Spring   2012</p><p class="" style="white-space:pre-wrap;"><strong>2008-2016: </strong>Marching Percussion Technical Instructor, Various</p><p class="" style="white-space:pre-wrap;">Chatham Central High School, Bear Creek, NC: Principal technique instructor and assistant show designer</p><p class="" style="white-space:pre-wrap;">Century Highschool, Sykesville, MD: Principal battery instructor and music designer</p><p class="" style="white-space:pre-wrap;">Myers Park High School,   Charlotte, NC</p><p class="" style="white-space:pre-wrap;"><strong>2008-present: </strong>Private music theory instructor</p><p class="" style="white-space:pre-wrap;">Private music theory instruction of between 3 and 12 students weekly, in coordination with the Boatright School of Irish Music.<br>   <br> </p><p class="" style="white-space:pre-wrap;"><strong>TECHNOLOGY BACKGROUND</strong></p><p class="" style="white-space:pre-wrap;">Extensive professional background in various technical fields, including:</p><p class="" style="white-space:pre-wrap;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience as a composer working with: Reason, ProTools, Logic Pro, Reaper, SuperCollider, and Max/MSP</p><p class="" style="white-space:pre-wrap;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hobbyist level experience in programming languages including Python and Java</p><p class="" style="white-space:pre-wrap;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 years of experience in Learning Technologies, working with students and faculty to develop and implement technologies for blended classrooms, flipped classrooms, and distance learning</p><p class="" style="white-space:pre-wrap;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 years of experience as a web administrator and consultant for a mid-size public relations firm in Charlotte, NC (Windward Global)</p><p class="" style="white-space:pre-wrap;">&nbsp;</p><p class="" style="white-space:pre-wrap;"><strong>SELECTED WORKS</strong></p><p class="" style="white-space:pre-wrap;"><strong><em>Availability Heuristic </em></strong>for flute, clarinet, trumpet, violin, viola, violoncello. March 2019.<br> Performed in April 2019 by yMusic at the University of Maryland.</p><p class="" style="white-space:pre-wrap;"><strong><em>Stories heard, but not recalled, </em></strong>electronic media. February 2019.<br> Premiered at Studio Gallery in Washington, D.C., February 22nd 2019 by StageFree.</p><p class="" style="white-space:pre-wrap;"><strong><em>her still singing limbs </em></strong>for flute trio. December 2018.</p><p class="" style="white-space:pre-wrap;"><strong><em>Alecta </em></strong>for orchestra. May 2018.<br> Performed in May 2018 by the University of Maryland Symphony Orchestra.<br><strong><em><br> inverse half-life </em></strong>for three percussionists and SuperCollider. March 2018.<br> Pending performance in Spring 2019 at the University of Maryland.</p><p class="" style="white-space:pre-wrap;"><strong><em>Near Death Experience, </em></strong>SuperCollider accompaniment for stage work. November 2017.<br> Generative electronic accompaniment for <em>Near Death Experience, </em>original stage work by Nikoo Mamdoohi and the Vaahi Art Collective. Premiered November 8th-12th 2017 at the Charm City Fringe Festival in Baltimore, MD.</p><p class="" style="white-space:pre-wrap;"><strong><em>Iranian Folksong Arrangements </em></strong>for violin and viola. Fall 2017.<br> Premiered October 19th 2017 at the Hill Center in Washington, DC. Ava Shadmani, violin, and Kimia Hesabi, viola.</p><p class="" style="white-space:pre-wrap;"><strong><em>Lettie is Given to the Ocean </em></strong>for baritone voice, viola, ‘cello, and SuperCollider. September 2017.<br> <em>Written for the NextNOW festival at the Clarice Smith Performing Arts Center. </em>Premiered September 2017. Aaron Peisner, baritone; Becca Barnett, viola; Katie McCarthy, ‘cello.</p><p class="" style="white-space:pre-wrap;"><strong><em>Were You Niamh</em></strong> for timpani and electronic tape. December 2015.<br> <em>Commissioned by Diana Loomer</em>, percussion instructor at the University of Texas at Austin.<br> Premiered February 2017 at the University of Texas at Austin. Diana Loomer, timpani.</p><p class="" style="white-space:pre-wrap;"><strong><em>The Skies Above, the Seas Below</em></strong> for marching indoor percussion ensemble. December 2014.<br> <em>Commissioned by Century High School</em>. Premiered throughout the Winter 2015 KIDA season by the Century High School marching percussion ensemble.</p><p class="" style="white-space:pre-wrap;"><strong><em>Icarus</em></strong> for bassoon quartet. October 2014.<br> <em>Commissioned by Ronn Hall,</em> associate principal bassoon, Hawaii Symphony Orchestra.</p><p class="" style="white-space:pre-wrap;"><strong><em>Per Aspera ad Astra</em></strong> for string quartet. January 2014.<br> Written for the Kronos String Quartet in coordination with the quartet’s annual residence at UMD-CP.<br> Performed in February 2014 at the University of Maryland by the Kronos String Quartet.</p><p class="" style="white-space:pre-wrap;"><strong><em>The Longest Year</em></strong> for vibraphone. April 2013.<br> Premiered April 2013 at the University of Maryland. Robbie Bowen, vibraphone. <br> Performed 2018 by Jon McGovern, vibraphone.</p><p class="" style="white-space:pre-wrap;"><strong><em>STS-135 Atlantis</em></strong> for double second steel drums and ‘cello. August 2011.<br> Premiered December 2012 at the University of Maryland. Duncan Boatright, steel drums.</p><p class="" style="white-space:pre-wrap;"><strong><em>discontent</em></strong> for violin and electronic tape. November 2010.<br> Premiered November 2010 at Appalachian State University. Michelle Flanagan, violin.</p><p class="" style="white-space:pre-wrap;"><strong><em>As I Ponder’d</em></strong> for alto and vibraphone. February 2010.<br> Premiered March 2012 at Appalachian State University. Lana Card, alto; Mitch Greco, vibraphone.</p><p class="" style="white-space:pre-wrap;"><strong><em>Musica Instrumentalis</em></strong> for string quartet. October 2009.<br> Premiered November 2009 at Appalachian State University. Appalachian State University undergraduate string quartet.</p><p class="" style="white-space:pre-wrap;"><strong><em>beagle</em></strong> for wind quartet, string quartet, and 2 vibraphones. January 2009.<br> Premiered February 2009 at Appalachian State University.<br> <em>2nd place winner of the ASU Charles Darwin Bicentennial Composition Competition</em>.</p><p class="" style="white-space:pre-wrap;">&nbsp;</p><p class="" style="white-space:pre-wrap;"><strong>RESEARCH</strong></p><p class="" style="white-space:pre-wrap;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>In progress: </strong>Research in progress for presentation at 2019-2020 conferences; score study of <strong>Roger Reynolds, <em>…the serpent-snapping eye</em></strong><em>, </em>including study of composer’s manuscripts and reference notes accessed at his archives in the Library of Congress. Research focuses on the mathematical underpinnings that formulate the work’s structure, form, and sonic events.</p><p class="" style="white-space:pre-wrap;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Presented at National Council on Undergraduate Research in 2012: </strong>Research in the usage of the tenor steel pan as an aid for music theory instruction in cultural settings that do not readily provide keyboard instruments.</p><p class="" style="white-space:pre-wrap;">&nbsp;</p><p class="" style="white-space:pre-wrap;"><strong>MEDIA APPEARANCES</strong></p><p class="" style="white-space:pre-wrap;"><strong><em>StageFree Podcast, </em></strong>Episode 8 – Concert 2.4, Bytes and Brushes. February 2019.</p><p class="" style="white-space:pre-wrap;"><strong><em>Young Musician’s Podcast,</em> </strong>Season 2, Episode 3: This Podcast is a Graphic Score. October 2018.<br> <a href="https://soundcloud.com/user-38178210-287367122/s2-ep-3-this-podcast-is-a-graphic-score">https://soundcloud.com/user-38178210-287367122/s2-ep-3-this-podcast-is-a-graphic-score</a></p><p class="" style="white-space:pre-wrap;"><em>“Dom talks about SuperCollider with Duncan Boatright.”</em></p><p class="" style="white-space:pre-wrap;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Review: ‘NDE’ at Charm City Fringe Festival. </strong>November 2017.</p><p class="" style="white-space:pre-wrap;"><em>“This is a powerful[ly] devised play which speaks to the nature of life and how we handle our own mortality. […] At times the scenes evoke wonder, sadness, confusion, and a host of other emotions which we all experience at one point or another.”</em></p><p class="" style="white-space:pre-wrap;"><strong><em>Undergraduate Research in Music: A Guide for Students</em></strong>, Young, Gregory and Jenny Shanahan. August 2017.</p><p class="" style="white-space:pre-wrap;"><em>“Using an alternative instrument as a means of music theory instruction could benefit students in these areas in incredible ways.”</em> Reprinted accepted abstract from NCUR presentation.</p><p class="" style="white-space:pre-wrap;"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </em><strong><em>A Weekend of Music, </em></strong>IrishPhiladelphia.com. August 2013.</p><p class="" style="white-space:pre-wrap;"><strong><em>Appalachian Today, </em></strong>July 2012.<br> <a href="https://music.appstate.edu/news/appalachian-today-duncan-boatright-music">https://music.appstate.edu/news/appalachian-today-duncan-boatright-music</a></p><p class="" style="white-space:pre-wrap;"><em>“A percussion student, Boatright researched whether music theory could be taught just as well using the steel drum as it can with the most predominant instrument used in music theory instruction, the piano.”</em></p><p class="" style="white-space:pre-wrap;">&nbsp;</p><p class="" style="white-space:pre-wrap;"><strong>INSTRUCTORS</strong></p><p class="" style="white-space:pre-wrap;"><strong><em>Primary Instructors</em></strong><em><br> </em>Dr. Thomas DeLio; composition and electroacoustic music<br> Dr. Lawrence Moss; composition<br> Dr. Jennifer Snodgrass; music theory pedagogy<br> Dr. Scott Meister; composition and electroacoustic music</p><p class="" style="white-space:pre-wrap;"><strong><em>Secondary Instructors</em></strong><em><br> </em>Dr. Mark Wilson; composition and orchestration<br> Dr. David Froom; composition<br> Dr. Robert Falvo; percussion</p><p class="" style="white-space:pre-wrap;"><strong><em>Master Classes</em></strong><em><br> </em>David Maslanka<br> Brian Balmages</p>
+        </div>
+
+        <div id="Code" class="tabcontent">
+          <p style="text-align:center;">
+          <a href="https://github.com/Virtute"><img src="images/github.png"></a>
+          </p>
+        </div>
+      </main-content>
+    </main-body>
+    </bg-wrapper>
+    <script src="js/main.js"></script>
   </body>
 </html>
