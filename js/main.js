@@ -1,3 +1,5 @@
+// checking for commit speed
+
 window.addEventListener('DOMContentLoaded', function (e) {
   document.querySelector('header-bar').onclick = handlePresentationClick;
 })
